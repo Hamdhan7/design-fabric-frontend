@@ -1,0 +1,244 @@
+/* AdminProducts.css */
+.admin-page {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 20px;
+    /* From https://css.glass */
+
+
+}
+
+.add-product-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.78);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.name-description-price-section {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+    gap: 30px;
+
+}
+
+/* Add to your existing styles in AdminProducts.css */
+
+.image-choose-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    padding: 30px;
+    gap: 40px;
+
+}
+
+.image-choose-section input{
+    display: flex;
+    padding: 10px;
+    -webkit-box-shadow: 10px 10px 90px 0px rgba(237, 237, 237, 1);
+    -moz-box-shadow: 10px 10px 90px 0px rgba(237, 237, 237, 1);
+    box-shadow: 10px 10px 90px 0px rgba(237, 237, 237, 1);
+    border-radius:6px;
+    border-width:1px;
+    color:#8e8e8e
+    
+
+}
+.add-product-button-section{
+    display: flex;
+    justify-content: flex-end;
+}
+.add-product-button{
+
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin-right: 15px;
+    padding: 10px;
+    background-color:rgb(108, 174, 125);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+}
+
+.name-description-price-section input {
+    padding: 10px;
+    -webkit-box-shadow: 10px 10px 90px 0px rgba(237, 237, 237, 1);
+    -moz-box-shadow: 10px 10px 90px 0px rgba(237, 237, 237, 1);
+    box-shadow: 10px 10px 90px 0px rgba(237, 237, 237, 1);
+    border-radius:6px;
+    border-width:1px;
+
+}
+
+.product-list {
+    position: relative;
+    z-index: 0;
+    /* Set a lower z-index for the table to be behind the scrollbar */
+    background: rgba(255, 255, 255, 0.78);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.product-list table {
+    width: 100%;
+    border-collapse: collapse;
+    z-index: 1;
+    /* Set a higher z-index for the table to be above the scrollbar */
+}
+
+.product-list thead th {
+    position: sticky;
+    top: 0;
+    background-color: #6bbdfb;
+    color: white;
+    font-size: 16px;
+    z-index: 2;
+    /* Set an even higher z-index for the table heading to be above the scrollbar */
+}
+
+.product-list::-webkit-scrollbar {
+    width: 12px;
+    /* Set your desired width for the scrollbar */
+    position: absolute;
+    /* Set position to absolute for proper placement */
+    right: 0;
+    /* Adjust the right position to align with the table content */
+    z-index: 1;
+    /* Set z-index to overlay on the table */
+}
+
+.product-list::-webkit-scrollbar-thumb {
+    background-color: #007bff42;
+    /* Set your desired color for the scrollbar thumb */
+    border-radius: 8px;
+    /* Set your desired border radius for the scrollbar thumb */
+}
+
+.product-list::-webkit-scrollbar-track {
+    background-color: #7d242400;
+    /* Set your desired color for the scrollbar track */
+}
+
+
+.product-list tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    /* Set your desired background color for odd rows */
+}
+
+.product-list tbody tr:nth-child(even) {
+    background-color: #b0ddff4a;
+    /* Set your desired background color for even rows */
+}
+
+.product-list th,
+.product-list td {
+    border: 0px solid #ddd;
+    padding: 10px 10px 10px 25px;
+    text-align: left;
+    color:#595959;
+}
+
+
+.product-list .edit-button {
+    margin-right: 15px;
+    padding: 0px 15px 0px 15px;
+    background-color: #ffffff00;
+    color: #6eb1f9;
+    border-color:#6eb1f9 ;
+    border-width:1px;
+    border-radius: 5px;  
+    cursor: pointer;
+}
+
+
+.product-list .delete-button {
+    background-color: #ffffff00;
+    padding: 0px 15px 0px 15px;
+    color: #ff5050;
+    border-color:#ff5050 ;
+    border-width:1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-list .cancel-button {
+    background-color: #ffffff;
+    padding: 0px 15px 0px 15px;
+    color: #6eb1f9;
+    border-color:#6eb1f9 ;
+    border-width:1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-list .save-button {
+    background-color: #ffffff;
+    padding: 0px 15px 0px 15px;
+    margin-right: 15px;
+    color: #6eb1f9;
+    border-color:#6eb1f9 ;
+    border-width:1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-list .edit-button:hover {
+    background-color:#6eb1f9;
+    color:white;
+}
+
+.product-list .delete-button:hover{
+    background-color:#ff5050;
+    color:white;
+
+}
+
+.product-list .save-button:hover{
+    background-color:#6eb1f9;
+    color:white;
+}
+
+.product-list .cancel-button:hover{
+    background-color:#6eb1f9;
+    color:white;
+}
+
+.product-list button:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.product-list .selected-row {
+    background-color: #8ecbfa;
+    /* Set your desired background color for the selected row */
+}
+
+
+.edit-buttons {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.edit-delete-buttons button {
+    margin-right: 5px;
+}

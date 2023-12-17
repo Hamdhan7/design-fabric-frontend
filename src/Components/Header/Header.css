@@ -1,0 +1,131 @@
+/* Header.css */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.header-section-content {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    border-radius: 38px;
+    background: linear-gradient(180deg, #080064 0%, #07005A 100%);
+    box-shadow: 0px 4px 37px 0px rgba(8, 0, 96, 0.27);
+}
+
+.left-blob {
+    width: 550px;
+    /* Adjust the blob size as needed */
+    height: auto;
+
+}
+
+.right-blob {
+    flex-direction: row;
+    height: auto;
+    justify-content: flex-end;
+
+}
+
+.text-area{
+    display: flex;
+    flex-direction: column;
+    min-width: 550px;
+
+}
+
+
+.text-area-heading-1 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.text-area-heading-2 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.text-area-heading-3 {
+    color: #D1BAA8;
+    font-family: Poppins;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.text-area-paragraph {
+    justify-content:center ;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    width: 500px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+.header-section-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 83px;
+    padding-bottom: 80px;
+
+}
+
+.header-section-buttons .Buy-now-button-header-section {
+    justify-content: center;
+    text-align: center;
+    width: 140px;
+    padding: 10px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 2px solid #9E8B7D;
+    background: #9E8B7D;
+    box-shadow: 0px 4px 18px 0px rgba(209, 186, 168, 0.19);
+    color:white;
+    font-size: 14px;
+
+}
+
+.header-section-buttons .Buy-now-button-header-section:hover{
+    background: #98643e;
+    border: 2px solid #98643e;
+
+}
+
+.header-section-buttons .Explore-now-button-header-section {
+    justify-content: center;
+    text-align: center;
+    width: 140px;
+    padding: 10px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 2px solid #9E8B7D;
+    background: #ffffff00;
+    box-shadow: 0px 4px 18px 0px rgba(209, 186, 168, 0.19);
+    color:white;
+    font-size: 14px;
+
+
+}
+
+.header-section-buttons .Explore-now-button-header-section:hover{
+    background: #9E8B7D;
+    border: 2px solid #9E8B7D;
+
+}

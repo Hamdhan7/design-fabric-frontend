@@ -1,0 +1,94 @@
+.admin-page {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-image: linear-gradient(to right bottom, #c781d3, #a162bd, #7a45a7, #4f2a92, #14137d);  */
+    background-size: cover;
+    min-width: 100%;
+    padding: 20px;
+    height: 80vh;
+
+
+}
+
+.admin-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.78);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.left-panel {
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    /* From https://css.glass */
+    background:rgb(241, 241, 241);
+    border-radius: 10px 10px 10px 10px;
+    background: rgba(255, 255, 255, 0.78);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.orders-row,
+.products-row {
+    background-color: white;
+    padding: 10px 10px 10px 20px;
+    margin: 10px;
+    border-width:1px;
+    border-radius: 8px;
+    color:#002168;
+}
+
+.selected {
+    background-color: #002168;
+    color: white; /* Optional: Set text color to make it readable */
+}
+
+.products-row:hover {
+    border-color:#002168 ;
+    border-width:1px;
+
+}
+
+.orders-row:hover {
+    border-color: #002168;
+    border-width:1px;
+
+}
+
+.orders-row::selection{
+    background-color: #002168;
+    border-width:1px;
+
+
+}
+
+.right-panel {
+
+    width: 75%;
+    align-items: left;
+    padding: 30px;
+
+
+}
+.right-panel h1{
+
+    padding: 0px 0px 0px 20px;
+
+}

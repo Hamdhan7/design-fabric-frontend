@@ -1,0 +1,57 @@
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 60px 5px 20px;
+
+}
+
+.design-fabric-logo-text{
+
+    color: rgb(1, 1, 75);
+    font-size: 20px;
+    font-weight: 700;
+
+
+}
+
+.navigation-links-section{
+
+
+}
+
+.navigation-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:30px
+}
+
+.products-link{
+
+}
+
+.shop-link{
+
+}
+
+.latest-arrivals-link{
+
+}
+
+.login-button-section-navbar{
+
+}
+
+.login-button-section-navbar{
+
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    gap: 20px;
+}
+
+.login-button-section-navbar img{
+    width: auto;
+    height: 25px;
+}
