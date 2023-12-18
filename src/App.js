@@ -8,10 +8,6 @@ import AllProductSection from "./Components/AllProductsSection/AllProductSection
 import Footer from "./Components/Footer/Footer"
 // import AdminProducts from "./Components/AdminProducts/AdminProducts";
 // import MuiTest from "./Components/MUITest/MuiTest";
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import AdminPage from "./Components/AdminPage/AdminPage";
 import UserProduct from "./Components/UserProducts/UserProducts"
 import Login from "./Components/LoginPage/Login"
