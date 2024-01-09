@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import './ProductSection.css'; // Import your CSS file
 const productsData = [
     // Define your product data here
-    { id: 1, name: 'Product 1', description: 'Description 1', price: '$20', imageUrl: 'http://project-design-fabric-f30ca63e31e3.herokuapp.com/images/product-1701978538783.jpg' },
-    { id: 2, name: 'Product 2', description: 'Description 2', price: '$30', imageUrl: 'http://project-design-fabric-f30ca63e31e3.herokuapp.com/images/product-1701978573608.jpg' },
-    { id: 3, name: 'Product 3', description: 'Description 3', price: '$25', imageUrl: 'http://project-design-fabric-f30ca63e31e3.herokuapp.com/images/product-1701978640484.jpg' },
-    { id: 4, name: 'Product 4', description: 'Description 4', price: '$40', imageUrl: 'http://project-design-fabric-f30ca63e31e3.herokuapp.com/images/product-1701978786746.jpg' },
-    { id: 1, name: 'Product 5', description: 'Description 1', price: '$20', imageUrl: 'http://project-design-fabric-f30ca63e31e3.herokuapp.com/images/product-1701978573608.jpg' },
-    { id: 4, name: 'Product 4', description: 'Description 4', price: '$40', imageUrl: 'http://project-design-fabric-f30ca63e31e3.herokuapp.com/images/product-1701978786746.jpg' },
+    { id: 1, name: 'Product 1', description: 'Description 1', price: '$20', imageUrl: 'http://localhost:3000/images/product-1701978538783.jpg' },
+    { id: 2, name: 'Product 2', description: 'Description 2', price: '$30', imageUrl: 'http://localhost:3000/images/product-1701978573608.jpg' },
+    { id: 3, name: 'Product 3', description: 'Description 3', price: '$25', imageUrl: 'http://localhost:3000/images/product-1701978640484.jpg' },
+    { id: 4, name: 'Product 4', description: 'Description 4', price: '$40', imageUrl: 'http://localhost:3000/images/product-1701978786746.jpg' },
+    { id: 1, name: 'Product 5', description: 'Description 1', price: '$20', imageUrl: 'http://localhost:3000/images/product-1701978573608.jpg' },
+    { id: 4, name: 'Product 4', description: 'Description 4', price: '$40', imageUrl: 'http://localhost:3000/images/product-1701978786746.jpg' },
 
 
     // Add more products as needed

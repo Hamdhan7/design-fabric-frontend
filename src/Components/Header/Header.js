@@ -8,7 +8,7 @@ const Header = () => {
             <div className="header-section-content">
             <div className="left-blob">
                 {/* Image over the left blob */}
-                <img src="/Assets/LeftBlobImage.png" alt="Left Blob" className="blob-image" />
+                <img src="/Assets/Frame 54-2.jpg" alt="Left Blob" className="blob-image" />
             </div>
 
             <div className="header-content">
@@ -20,8 +20,7 @@ const Header = () => {
                             <div className="text-area-heading-3">FABRICS</div>
                         </div>
                         <div className="text-area-paragraph">Whether you're a fashion designer, an interior decorator, or a DIY enthusiast, our range of premium printed fabrics is sure to inspire and elevate your creations.</div>
-                    </div>
-                    <div className="header-section-buttons">
+                        <div className="header-section-buttons">
                         <div className="Explore-now-button-header-section">
                             EXPLORE
                         </div>
@@ -29,12 +28,14 @@ const Header = () => {
                            BUY NOW
                         </div>
                     </div>
+                    </div>
+
                 </div>
             </div>
 
             <div className="right-blob">
                 {/* Image over the right blob */}
-                <img src="/Assets/RightBlobImage.png" alt="Right Blob" />
+                <img src="/Assets/Frame 53-3.jpg" alt="Left Blob" className="blob-image" />
             </div>
             </div>
 

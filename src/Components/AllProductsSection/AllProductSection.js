@@ -23,7 +23,7 @@ const AllProductSection = () => {
 
     const handleConfirmOrder = (orderDetails) => {
         // Call the API endpoint with the orderDetails
-        fetch('http://project-design-fabric-f30ca63e31e3.herokuapp.com/api/orders/', {
+        fetch('http://localhost:3000/api/orders/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ const AllProductSection = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://project-design-fabric-f30ca63e31e3.herokuapp.com/api/products');
+                const response = await fetch('http://localhost:3000/api/products');
                 const data = await response.json();
                 console.log('Fetched data:', data); // Log the fetched data
                 setAllProductsData(data);
@@ -68,6 +68,14 @@ const AllProductSection = () => {
     // Calculate the number of empty cards needed
     const emptyCardCount = Math.max(0, productsPerPage - currentProducts.length);
 
+    const maxButtonsPerPage = 4; // Adjust this value based on your preference
+    const totalButtons = Math.ceil(allProductsData.length / productsPerPage);
+    const totalPages = Math.ceil(allProductsData.length / productsPerPage);
+
+    const startButton = Math.max(1, currentPage - Math.floor(maxButtonsPerPage / 2));
+    const endButton = Math.min(startButton + maxButtonsPerPage - 1, totalPages);
+
+
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
@@ -77,15 +85,15 @@ const AllProductSection = () => {
             {/* <ProductSection/> */}
 
             <Header />
-{/* 
-            <div id='latestArrivals'>
+            
+            {/* <div id='latestArrivals'>
                 <ProductSection />
             </div> */}
 
             <div className='all-products-section' id='products'>
                 <div className="all-product-cards">
                     {currentProducts.map((product, index) => (
-                        <div key={index} className="all-product-card">
+                        <div key={index} className="all-product-card" onClick={() => handleBuyNowClick(product.ProductID)}>
                             {/* Render product details */}
                             <img src={product.ImageURL} alt={product.Name} className="product-image" />
                             <div className='product-name-container'>
@@ -122,15 +130,27 @@ const AllProductSection = () => {
                 </div>
 
                 <div className="pagination-all-products">
-                    {Array.from({ length: Math.ceil(allProductsData.length / productsPerPage) }).map((_, index) => (
+                    <button
+                        onClick={() => paginate(Math.max(1, currentPage - 1))}
+                        disabled={currentPage === 1}
+                    >
+                        {"<"}
+                    </button>
+                    {Array.from({ length: endButton - startButton + 1 }).map((_, index) => (
                         <button
-                            key={index + 1}
-                            onClick={() => paginate(index + 1)}
-                            className={currentPage === index + 1 ? 'active' : ''}
+                            key={startButton + index}
+                            onClick={() => paginate(startButton + index)}
+                            className={currentPage === startButton + index ? 'active' : ''}
                         >
-                            {index + 1}
+                            {startButton + index}
                         </button>
                     ))}
+                    <button
+                        onClick={() => paginate(Math.min(totalPages, currentPage + 1))}
+                        disabled={currentPage === totalPages}
+                    >
+                         {">"}
+                    </button>
                 </div>
             </div>
         </div>

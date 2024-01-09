@@ -13,7 +13,7 @@ const AdminOrders = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://project-design-fabric-f30ca63e31e3.herokuapp.com/api/admin/orders/');
+            const response = await fetch('http://localhost:3000/api/admin/orders/');
             const data = await response.json();
             setOrders(data);
         } catch (error) {
@@ -23,7 +23,7 @@ const AdminOrders = () => {
 
     const handleDeleteOrder = async (orderId) => {
         try {
-            await fetch(`http://project-design-fabric-f30ca63e31e3.herokuapp.com/api/admin/orders/${orderId}`, {
+            await fetch(`http://localhost:3000/api/admin/orders/${orderId}`, {
                 method: 'DELETE',
             });
 

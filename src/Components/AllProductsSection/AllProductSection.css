@@ -56,7 +56,7 @@
 
 .product-price-container {
 
-    color: #4e7498;
+    color: rgb(239, 68, 30);
 }
 
 /* AllProductSection.css */
@@ -105,6 +105,7 @@
 .buy-now-button:hover {
     background: rgb(5, 43, 80);
     border: 2px solid rgb(5, 43, 80);
+    color: #ffffff;
 
 }
 
@@ -140,8 +141,8 @@
 
 .pagination-all-products {
     display: flex;
+    position:static;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .pagination-all-products button {
@@ -158,3 +159,32 @@
     box-shadow: 0px 1px 5px rgb(203, 228, 255);
     color: white;
 }
+
+
+@media (max-width: 480px) {
+
+
+    .all-products-section {
+        padding: 8px;
+        height: auto;
+        width: 100%;
+    
+    }
+    /* Adjust styles for screens with a maximum width of 768px (typical for mobile devices) */
+    .all-product-cards {
+        
+      padding: 0px; /* Adjust padding for better spacing on smaller screens */
+      gap: 0px;
+    }
+  
+    .all-product-card {
+        max-width: calc(50% - 14px);
+        margin-bottom: 14px;
+        min-height: 300px;
+    }
+
+    .buttons {
+        display:none;
+ 
+    }
+  }

@@ -90,3 +90,19 @@
     background:rgb(255, 133, 81);
 
 }
+
+@media (max-width: 480px) {
+
+    .order-confirmation-input-container input {
+        padding: 10px 120px 10px 10px;
+
+    }
+
+    .order-confirmation-buttons {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 52px;
+    }
+
+  }

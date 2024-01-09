@@ -1,38 +1,60 @@
 /* Header.css */
 .header-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
+    justify-content: center
 }
 
 .header-section-content {
     display: flex;
-    align-items: flex-end;
-    width: 100%;
-    border-radius: 38px;
-    background: linear-gradient(180deg, #080064 0%, #07005A 100%);
-    box-shadow: 0px 4px 37px 0px rgba(8, 0, 96, 0.27);
+    padding: 20px 30px 0px 30px;
+
+
+
+}
+
+.header-content {
+
+    background: linear-gradient(180deg, #090164 0%, #090164 100%);
+    margin: 0px -2px 0px -2px;
+    padding: 0;
+    height: auto;
+
+
+}
+
+.blob-image{
+
 }
 
 .left-blob {
-    width: 550px;
     /* Adjust the blob size as needed */
-    height: auto;
+    height: 30vh;
 
 }
 
 .right-blob {
     flex-direction: row;
-    height: auto;
     justify-content: flex-end;
+    height: 70vh;
 
 }
 
-.text-area{
+.blob-image{
+    height: 70vh;
+    width: 151vh;
+
+}
+
+.text-area {
     display: flex;
     flex-direction: column;
-    min-width: 550px;
+    justify-content: center;
+    padding-top: 1.5rem;
+
+    margin-left: -4rem;
+    padding-bottom: 1.5rem;
+    height: 70vh;
+
 
 }
 
@@ -40,92 +62,215 @@
 .text-area-heading-1 {
     color: #FFF;
     font-family: Poppins;
-    font-size: 70px;
+    font-size: 4.5rem;
+    /* Adjust as needed */
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 5rem;
+
 }
 
 
 .text-area-heading-2 {
     color: #FFF;
     font-family: Poppins;
-    font-size: 65px;
+    font-size: 4.5rem;
+    /* Adjust as needed */
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 5rem;
+    margin-left: 4rem;
 }
 
 .text-area-heading-3 {
     color: #D1BAA8;
     font-family: Poppins;
-    font-size: 65px;
+    font-size: 4.5rem;
+    /* Adjust as needed */
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 5rem;
+    margin-left: 7rem;
+
 }
 
 .text-area-paragraph {
-    justify-content:center ;
+    justify-content: center;
     color: #FFF;
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 1.2vw;
+    /* Adjust as needed */
     font-style: normal;
     font-weight: 400;
-    width: 500px;
     padding-top: 20px;
-    padding-bottom: 80px;
+    padding-bottom: 3vw;
+    margin-left: 7rem;
+
 }
 
 .header-section-buttons {
     display: flex;
     flex-direction: row;
-    gap: 83px;
-    padding-bottom: 80px;
+    gap: 2rem;
+    margin-left: 7rem;
+
 
 }
 
 .header-section-buttons .Buy-now-button-header-section {
     justify-content: center;
     text-align: center;
-    width: 140px;
-    padding: 10px;
-    font-size: 10px;
-    cursor: pointer;
-    border-radius: 7px;
-    border: 2px solid #9E8B7D;
-    background: #9E8B7D;
-    box-shadow: 0px 4px 18px 0px rgba(209, 186, 168, 0.19);
-    color:white;
-    font-size: 14px;
 
+    font-size: 1rem;
+    padding: 8px 25px;
+    gap: 10px;
+    border-radius: 14px;
+    background: #FE8C5B;
+    box-shadow: 0px 4px 18px 0px rgba(209, 186, 168, 0.19);
+
+
+    color: #FFF;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.header-section-buttons .Buy-now-button-header-section:hover{
+.header-section-buttons .Buy-now-button-header-section:hover {
     background: #98643e;
     border: 2px solid #98643e;
 
 }
 
 .header-section-buttons .Explore-now-button-header-section {
-    justify-content: center;
     text-align: center;
-    width: 140px;
-    padding: 10px;
-    font-size: 10px;
+    /* Adjust as needed */
+    font-size: 1rem;
+    /* Adjust as needed */
     cursor: pointer;
-    border-radius: 7px;
-    border: 2px solid #9E8B7D;
-    background: #ffffff00;
-    box-shadow: 0px 4px 18px 0px rgba(209, 186, 168, 0.19);
-    color:white;
-    font-size: 14px;
-
+    color: white;
+    padding: 5px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 14px;
+    border: 1px solid #FC8A59;
+    background: rgba(209, 186, 168, 0.00);
+    box-shadow: 0px 4px 18px 0px rgba(209, 186, 168, 0.40);
+    color: #FC8A59;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 
 }
 
-.header-section-buttons .Explore-now-button-header-section:hover{
+.header-section-buttons .Explore-now-button-header-section:hover {
     background: #9E8B7D;
     border: 2px solid #9E8B7D;
+
+}
+
+@media only screen and (max-width: 431px) {
+    .header-section {
+        flex-direction: row;
+    }
+
+    .header-content{
+        border-radius: 0px 12px 12px 0px;
+    }
+    .header-section-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1px 9px 11px 9px;
+        height: 30vh;
+
+    
+    }
+
+    .right-blob {
+        display: none;
+    }
+
+    .left-blob {
+
+        height: auto;
+
+
+    }
+
+    .blob-image{
+        width: 44vh;
+        height: 26vh;
+    }
+
+    .text-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: -1.3rem;
+        height: 26vh;
+    }
+
+    .text-area-heading-1,
+    .text-area-heading-2,
+    .text-area-heading-3 {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+
+        
+
+    }
+    .text-area-heading-1{
+
+    }
+
+    .text-area-heading-2{
+        margin-left: 1.2rem;
+
+    }
+
+    .text-area-heading-3{
+        margin-left: 2.3rem;
+
+
+    }
+
+    .text-area-paragraph {
+        font-size: 6px;
+        margin-left: 2.3rem;
+        padding-top: 0.5rem;
+        padding-right: 1rem;
+        margin-left: 2.3rem;
+
+
+
+    }
+
+
+
+    .header-section-buttons {
+        flex-direction: row;
+        margin-left: 2.3rem;
+    }
+
+    .header-section-buttons .Buy-now-button-header-section,
+    .header-section-buttons .Explore-now-button-header-section {
+        padding: 3px 12px;
+        font-size: 5px;
+
+    }
+}
+
+
+@media only screen and (min-width: 2560px) {
+    .text-area .text-area-heading-1,
+    .text-area-heading-2,
+    .text-area-heading-3{
+
+        line-height: 10rem;
+    }
+
 
 }

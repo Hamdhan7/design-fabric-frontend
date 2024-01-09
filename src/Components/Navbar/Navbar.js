@@ -1,9 +1,10 @@
 // Navbar.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
-import './Navbar.css';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import userPhoto from './user.png'
+import { faBars } from '@fortawesome/free-solid-svg-icons'; // Import the sandwich menu icon
+import './Navbar.css';
+import userPhoto from './user.png';
 
 const Navbar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -16,49 +17,29 @@ const Navbar = () => {
         <nav className="navbar-container">
             {/* Left Side: Logo */}
             <div className="design-fabric-logo-text">
-                <Link to="/products">
-                    DESIGN FABRIC
-                </Link>
+                <Link to="/products">DESIGN FABRIC</Link>
             </div>
 
+            {/* Sandwich Menu Icon for Mobile */}
+            <div className="mobile-menu-icon" onClick={toggleMenu}>
+                <FontAwesomeIcon icon={faBars} />
+            </div>
 
             {/* Middle: Navigation Links */}
-            <div className="navigation-links-section">
+            <div className={`navigation-links-section ${isMenuOpen ? 'show-menu' : ''}`}>
                 <div className="navigation-links">
-                    <a href='#products'>
-                        <Link to="/products">
-                            <div className="products-link">PRODUCTS</div>
-                        </Link>
-                    </a>
-
-                    <Link to="/products">
-                        <a href='#products'>
-
-                            <div className="shop-link">SHOP</div>
-
-                        </a>
-
-                    </Link>
-
-
-                    <a href='#latestArrivals'>
-                        <Link to="/products">
-                            <div className="latest-arrivals-link">NEW ARRIVALS</div>
-                        </Link>
-
-                    </a>
-
+                    <Link to="/products">PRODUCTS</Link>
+                    <Link to="/shop" >SHOP</Link>
+                    <Link to="/latest-arrivals">NEW ARRIVALS</Link>
                 </div>
             </div>
 
-
-            <div className='login-button-section-navbar'>
-                <Link to="http://project-design-fabric-f30ca63e31e3.herokuapp.com/auth/google">
-                    <img src={userPhoto}></img>
-                    Login
+            {/* Right Side: Login Button and User Photo */}
+            <div className="login-button-section-navbar">
+                <Link to="http://localhost:3000/auth/google">
+                    <img src={userPhoto} alt="User" />
                 </Link>
             </div>
-
         </nav>
     );
 };

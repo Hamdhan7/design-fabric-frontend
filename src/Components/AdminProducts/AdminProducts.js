@@ -14,7 +14,7 @@ const AdminProducts = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://project-design-fabric-f30ca63e31e3.herokuapp.com/api/products');
+            const response = await fetch('http://localhost:3000/api/products');
             const data = await response.json();
             setProducts(data);
         } catch (error) {
@@ -46,13 +46,13 @@ const AdminProducts = () => {
     
 
             if (selectedProduct) {
-                await fetch(`http://project-design-fabric-f30ca63e31e3.herokuapp.com/api/admin/products/${selectedProduct.ProductID}`, {
+                await fetch(`http://localhost:3000/api/admin/products/${selectedProduct.ProductID}`, {
                     method: 'PUT',
                     body: formData,
                 });
                 setSelectedProduct(null);
             } else {
-                await fetch('http://project-design-fabric-f30ca63e31e3.herokuapp.com/api/admin/products', {
+                await fetch('http://localhost:3000/api/admin/products', {
                     method: 'POST',
                     body: formData,
                 });
@@ -91,7 +91,7 @@ const AdminProducts = () => {
 
     const handleDeleteProduct = async (productId) => {
         try {
-            await fetch(`http://project-design-fabric-f30ca63e31e3.herokuapp.com/api/admin/products/${productId}`, {
+            await fetch(`http://localhost:3000/api/admin/products/${productId}`, {
                 method: 'DELETE',
             });
 

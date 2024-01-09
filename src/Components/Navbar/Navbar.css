@@ -1,12 +1,12 @@
-.navbar-container{
+.navbar-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 60px 5px 20px;
+    padding: 10px 20px 5px 20px;
 
 }
 
-.design-fabric-logo-text{
+.design-fabric-logo-text {
 
     color: rgb(1, 1, 75);
     font-size: 20px;
@@ -15,43 +15,132 @@
 
 }
 
-.navigation-links-section{
+.navigation-links-section {}
 
-
-}
-
-.navigation-links{
+.navigation-links {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap:30px
+    gap: 30px
 }
 
-.products-link{
+.products-link {}
 
-}
+.shop-link {}
 
-.shop-link{
+.latest-arrivals-link {}
 
-}
 
-.latest-arrivals-link{
-
-}
-
-.login-button-section-navbar{
-
-}
-
-.login-button-section-navbar{
+.login-button-section-navbar a {
 
     display: flex;
     flex-direction: row;
-    font-size: 10px;
+    font-size: 16px;
     gap: 20px;
 }
 
-.login-button-section-navbar img{
+.login-button-section-navbar img {
     width: auto;
     height: 25px;
+}
+
+.mobile-menu-icon {
+    display: none;
+    /* Hide the hamburger menu icon by default */
+    cursor: pointer;
+    font-size: 24px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .navbar-container {
+        padding: 9px 10px 5px 10px;
+    }
+
+    .navigation-links-section {
+        display: none;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.8s, transform 0.8s;
+        /* Add smooth fade-in and slide-down animations */
+
+        background: rgba(243, 243, 243, 0.78);
+        border-radius: 0px 0px 16px 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.5px);
+        -webkit-backdrop-filter: blur(7.5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+    }
+
+    .login-button-section-navbar {
+
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        gap: 20px;
+
+    }
+
+    /* Display the hamburger menu icon on mobile devices and move it to the left */
+    .mobile-menu-icon {
+        display: block;
+        order: -1;
+        /* Move the hamburger menu to the left */
+    }
+
+    /* Vertical dropdown menu */
+    .navigation-links-section.show-menu {
+        display: flex;
+        flex-direction: column;
+        /* Make the dropdown vertical */
+        gap: 10px;
+        /* Adjust the gap between menu items as needed */
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Display the menu items vertically */
+    .navigation-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        gap: 12px;
+        padding: 5px 15px;
+    }
+
+    /* Apply left-to-right animation to each link */
+    .navigation-links a {
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.3s, transform 0.3s ease-out;
+        opacity: 1;
+        transform: translateX(0);
+        padding: 11px;
+        border-radius: 11px;
+    }
+
+    /* Trigger the animation when the menu is shown */
+    .navigation-links-section.show-menu .navigation-links a {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .navigation-links :hover {
+        background: rgb(1, 1, 75);
+        color: #fff;
+        /* Change color on hover */
+    }
+
+    /* Add this to your Navbar.css */
+
+
+    
+
 }
